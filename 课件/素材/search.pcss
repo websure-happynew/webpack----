@@ -1,0 +1,93 @@
+.search-container {
+  border-radius: 5px;
+  background: #efefef;
+  overflow: hidden;
+  width: 1140px;
+  margin: 0 auto;
+  & .title {
+    background: #4588db;
+    float: left;
+    color: #fff;
+    & h2 {
+      font-size: 16px;
+      margin: 0;
+      font-weight: bold;
+      height: 52px;
+      line-height: 52px;
+      width: 80px;
+      text-align: center;
+    }
+  }
+  & .search-area {
+    overflow: hidden;
+    height: 104px;
+    color: #686869;
+    padding-left: 15px;
+    padding-right: 30px;
+    & .bar {
+      height: 52px;
+      font-size: 14px;
+      & .left {
+        float: left;
+      }
+      & .radio {
+        margin-right: 20px;
+        line-height: 52px;
+        padding-left: 28px;
+        position: relative;
+        float: left;
+        cursor: pointer;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          border: 1px solid #b3b3b3;
+        }
+        &.checked::after {
+          content: "";
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          left: 4px;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          background: #5488d5;
+        }
+      }
+    }
+  }
+  & .search-input {
+    float: right;
+    border: 1px solid #d2d2d2;
+    color: #747475;
+    height: 44px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 242px;
+    & .iconsearch {
+      float: right;
+      padding-left: 10px;
+      cursor: pointer;
+      width: 22px;
+      height: 22px;
+      border-left: 1px solid #d5d5d5;
+      background: url(~@/assets/search_icon.png) no-repeat 12px center;
+    }
+    & input {
+      border: none;
+      background: transparent;
+      outline: none;
+      color: inherit;
+      float: left;
+      height: 100%;
+      width: 180px;
+      color: inherit;
+    }
+  }
+}
